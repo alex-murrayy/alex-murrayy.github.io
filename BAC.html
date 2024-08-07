@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAC Calculator</title>
+    <link rel="stylesheet" href="stylesBAC.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Blood Alcohol Content (BAC) Calculator</h1>
+        <form id="bac-form">
+            <div class="form-group">
+                <label for="weight">Weight (lbs):</label>
+                <input type="number" id="weight" required>
+            </div>
+            <div class="form-group">
+                <label for="drinks">Number of Drinks:</label>
+                <input type="number" id="drinks" required>
+            </div>
+            <div class="form-group">
+                <label for="hours">Hours Since Last Drink:</label>
+                <input type="number" id="hours" required>
+            </div>
+            <div class="form-group">
+                <label>Gender:</label>
+                <div>
+                    <label>
+                        <input type="radio" name="gender" value="male" checked> Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female"> Female
+                    </label>
+                </div>
+            </div>
+            <button type="submit">Calculate BAC</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
