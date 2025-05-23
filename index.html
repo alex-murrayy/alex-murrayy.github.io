@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#about-me">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#videos">Resume</a>
+      <a href="mailto:alexandrumurray7@gmail.com">Contact</a>
+    </div>
+  </nav>
+  
+
     <header>
         <h1>Alex Murray</h1>
         <p>Computer Science Student @ UB & Aspiring Software Engineer</p>
@@ -32,33 +43,40 @@
 
     <section id="projects">
       <h2>Projects</h2>
-
-      <div class="project">
-        <h3><a class="button-link" href="robotSpider.html">Robot Spider</a></h3>
-        <p>A friend and I are in the process of designing and building a pet sized robotic spider. Our goal is to make the spider able to walk on walls and even ceilings!</p>
-      </div>
     
-      <div class="project">
-        <h3><a class="button-link" href="https://github.com/alex-murrayy/Computer-Vision-Mouse">Computer Vision Mouse</a></h3>
-        <p>This project uses computer vision to enable the user to perform mouse actions by making simple hand movements and gestures.</p>
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/p_QCPGMXJok" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
+      <div class="project-grid">
     
-      <div class="project">
-        <h3><a class="button-link" href="https://github.com/alex-murrayy">Pupil Tracking</a></h3>
-        <p>This code tracks the user's pupils. Will be posted to GitHub soon.</p>
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/s6zmPjJOjfI" frameborder="0" allowfullscreen></iframe>
+        <div class="project-card">
+          <h3>Computer Vision Mouse</h3>
+          <p>This project uses computer vision to enable the user to perform mouse actions by making simple hand movements and gestures.</p>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/p_QCPGMXJok" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <a class="button-link" href="https://github.com/alex-murrayy/Computer-Vision-Mouse">View on GitHub</a>
         </div>
-      </div>
+    
+        <div class="project-card">
+          <h3>Pupil Tracking</h3>
+          <p>This code tracks the user's pupils. Will be posted to GitHub soon.</p>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/s6zmPjJOjfI" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <a class="button-link" href="https://github.com/alex-murrayy">View on GitHub</a>
+        </div>
 
-      <div class="project">
-        <h3><a class="button-link" href="BAC.html">BAC Calculator</a></h3>
-        <p>This is a simple web app that calculates Blood Alcohol Content of users and then tells them whether it is safe to drive or not.</p>
+        <div class="project-card">
+          <h3>Robot Spider</h3>
+          <p>A friend and I are in the process of designing and building a pet-sized robotic spider. Our goal is to make the spider able to walk on walls and even ceilings!</p>
+          <a class="button-link" href="robotSpider.html">View Project</a>
+        </div>
+    
+        <div class="project-card">
+          <h3>BAC Calculator</h3>
+          <p>This is a simple web app that calculates Blood Alcohol Content of users and then tells them whether it is safe to drive or not.</p>
+          <a class="button-link" href="BAC.html">Try It</a>
+        </div>
+    
       </div>
-
     </section>
     
 
@@ -66,7 +84,7 @@
         <h2>Resume</h2>
         <img src="images/Screenshot 2025-05-23 at 5.57.28 PM.png" alt="Resume" width="800px" class="image-container">
     </section>
-
+  
     <footer>
         <p>&copy; 2025 Alex Murray.</p>
     </footer>
