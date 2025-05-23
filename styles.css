@@ -54,11 +54,6 @@ a:hover {
     text-decoration: underline;
 }
 
-.video-container {
-    margin: 20px 0;
-    text-align: center;
-}
-
 footer {
     text-align: center;
     padding: 10px 0;
@@ -77,4 +72,102 @@ footer a:hover {
     text-decoration: underline;
 }
 
+.button-link {
+    display: inline-block;
+    padding: 8px 5px;
+    margin: 5px 0;
+    background-color: #8B5CF6; /* Indigo-800 */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+  }
+  
+.button-link:hover {
+    background-color: #7C3AED; /* Indigo-700 */
+    transform: scale(1.03);
+    color: black;
+    text-decoration: none;
+  }
+  
+/* 👇 Add this CSS block */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    border-radius: 10px; /* optional */
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* or whatever you want as the max size */
+    margin: 1rem auto; /* center it */
+    overflow: hidden;
+    border-radius: 10px; /* optional for rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* optional shadow */
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .project {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .project h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .project p {
+    margin-bottom: 1rem;
+  }
 
+  .project h3 a.button-link {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 16px;
+  }
+
+  .link-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  
+  .button-link {
+    font-size: 16px;
+    display: inline-block;
+    padding: 12px 16px;
+    background-color: #8B5CF6;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .button-link:hover {
+    font-size: 16px;
+    background-color: #7C3AED;
+    transform: scale(1.03);
+  }
