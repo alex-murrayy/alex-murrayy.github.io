@@ -336,6 +336,23 @@ footer a:hover {
     border-radius: 12px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     background: white;
+    width: 100%;
+    max-width: 800px;
+    height: 1000px;
+  }
+
+  @media (max-width: 768px) {
+    .resume-pdf {
+      height: 600px;
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .resume-pdf {
+      height: 500px;
+      max-width: 100%;
+    }
   }
 
   .resume-download {
