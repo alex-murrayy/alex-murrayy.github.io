@@ -112,17 +112,20 @@ footer a:hover {
   
   .image-container {
     position: relative;
-    width: 100%;
-    max-width: 800px; /* or whatever you want as the max size */
+    width: 200px;
+    height: 200px;
     margin: 1rem auto; /* center it */
     overflow: hidden;
-    border-radius: 10px; /* optional for rounded corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* optional shadow */
+    border-radius: 50%; /* makes it circular */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 4px solid #8B5CF6;
+    object-fit: cover;
   }
   
   .image-container img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
   }
   
