@@ -504,6 +504,336 @@
         font-weight: 500;
         margin: 0.3rem;
       }
+
+      /* Mobile: flat, spacious, single-column document — no card stacking */
+      @media (max-width: 767px) {
+        body {
+          line-height: 1.65;
+          -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+          padding: 2rem 1.25rem 1.75rem;
+        }
+
+        header h1 {
+          font-size: 2rem;
+          font-weight: 800;
+          line-height: 1.15;
+          letter-spacing: -0.02em;
+        }
+
+        header p {
+          font-size: 0.95rem;
+          opacity: 0.95;
+        }
+
+        nav {
+          border-bottom-width: 1px;
+        }
+
+        nav ul {
+          padding: 0.5rem 1rem;
+          gap: 0;
+          justify-content: flex-start;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+          margin: 0;
+          max-width: none;
+        }
+
+        nav ul::-webkit-scrollbar {
+          display: none;
+        }
+
+        nav a {
+          padding: 0.75rem 1rem;
+          font-size: 0.8125rem;
+          white-space: nowrap;
+        }
+
+        .container {
+          margin: 0 auto;
+          padding: 0 1.25rem 2rem;
+          max-width: 100%;
+        }
+
+        /* Sections: no card look — just content + divider */
+        .section {
+          margin-bottom: 0;
+          padding: 1.75rem 0;
+          background: transparent;
+          border: none;
+          border-radius: 0;
+          box-shadow: none;
+          border-bottom: 1px solid rgba(134, 232, 252, 0.12);
+          transition: none;
+        }
+
+        .section:last-of-type {
+          border-bottom: none;
+        }
+
+        .section:hover {
+          transform: none;
+          box-shadow: none;
+        }
+
+        .section h2 {
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+          padding-bottom: 0.5rem;
+          border-bottom: none;
+          letter-spacing: -0.01em;
+        }
+
+        .section h2::after {
+          display: none;
+        }
+
+        .section h3 {
+          font-size: 1.125rem;
+          font-weight: 600;
+          margin-top: 1.5rem;
+          margin-bottom: 0.5rem;
+          color: var(--accent);
+        }
+
+        .section h3:first-of-type {
+          margin-top: 0;
+        }
+
+        .section p {
+          font-size: 1rem;
+          margin-bottom: 0.875rem;
+          color: var(--text);
+        }
+
+        .grid-2 {
+          margin: 1rem 0;
+          gap: 1.5rem;
+        }
+
+        .grid-2 > div {
+          background: transparent;
+          border: none;
+          padding: 0;
+          border-radius: 0;
+          box-shadow: none;
+        }
+
+        .grid-2 h3 {
+          margin-top: 0;
+        }
+
+        /* Stats: compact inline strip — not three big cards */
+        .grid-3 {
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+          margin: 1rem 0;
+        }
+
+        .stat-card {
+          background: transparent;
+          border: none;
+          border-bottom: 1px solid rgba(134, 232, 252, 0.15);
+          padding: 1rem 0;
+          border-radius: 0;
+          text-align: left;
+          box-shadow: none;
+          transition: none;
+        }
+
+        .stat-card:last-child {
+          border-bottom: none;
+        }
+
+        .stat-card:hover {
+          transform: none;
+          border-color: rgba(134, 232, 252, 0.15);
+          box-shadow: none;
+        }
+
+        .stat-card .stat-number {
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-bottom: 0.15rem;
+        }
+
+        .stat-card .stat-label {
+          font-size: 0.8125rem;
+          text-transform: none;
+          letter-spacing: 0;
+          color: var(--text-muted);
+        }
+
+        /* Highlight: subtle left bar only, no box */
+        .highlight-box {
+          background: transparent;
+          border-left: 3px solid var(--accent);
+          padding: 0 0 0 1rem;
+          margin: 1.25rem 0;
+          border-radius: 0;
+          transition: none;
+        }
+
+        .highlight-box:hover {
+          transform: none;
+          box-shadow: none;
+        }
+
+        .highlight-box h3 {
+          font-size: 1rem;
+          margin-bottom: 0.35rem;
+        }
+
+        .highlight-box p {
+          margin-bottom: 0;
+          font-size: 0.9375rem;
+        }
+
+        /* Competitors: simple list items, no cards */
+        .competitor-card {
+          background: transparent;
+          border: none;
+          border-bottom: 1px solid rgba(134, 232, 252, 0.12);
+          padding: 1.25rem 0;
+          margin-bottom: 0;
+          border-radius: 0;
+          box-shadow: none;
+          transition: none;
+        }
+
+        .competitor-card:last-child {
+          border-bottom: none;
+        }
+
+        .competitor-card:hover {
+          transform: none;
+          box-shadow: none;
+        }
+
+        .competitor-card h3 {
+          font-size: 1.0625rem;
+          margin-bottom: 0.35rem;
+        }
+
+        .competitor-card p {
+          font-size: 0.9375rem;
+          margin-bottom: 0.75rem;
+        }
+
+        .competitor-card .competitor-meta {
+          flex-direction: column;
+          gap: 0.5rem;
+          margin-top: 0.5rem;
+        }
+
+        .competitor-card .meta-item {
+          min-width: 0;
+        }
+
+        .competitor-card .meta-label {
+          font-size: 0.75rem;
+          margin-bottom: 0.15rem;
+        }
+
+        .competitor-card .meta-value {
+          font-size: 0.9375rem;
+        }
+
+        /* Phase: minimal timeline style */
+        .phase-card {
+          background: transparent;
+          border: none;
+          border-left: 3px solid var(--accent);
+          padding: 0 0 0 1rem;
+          margin-bottom: 1.25rem;
+          border-radius: 0;
+          box-shadow: none;
+        }
+
+        .phase-card:last-child {
+          margin-bottom: 0;
+        }
+
+        .phase-card::before {
+          display: none;
+        }
+
+        .phase-card h3 {
+          font-size: 1rem;
+          margin-bottom: 0.35rem;
+        }
+
+        .phase-card p {
+          font-size: 0.9375rem;
+          margin-bottom: 0.35rem;
+        }
+
+        .phase-card .revenue {
+          font-size: 1.125rem;
+          margin-top: 0.5rem;
+        }
+
+        /* Media & buttons */
+        .video-container {
+          margin: 1rem 0;
+          border-radius: 8px;
+          overflow: hidden;
+        }
+
+        .video-container video {
+          max-height: 50vh;
+          border-radius: 8px;
+        }
+
+        img {
+          margin: 1rem 0;
+          border-radius: 8px;
+        }
+
+        .button-link {
+          display: block;
+          text-align: center;
+          padding: 0.875rem 1.25rem;
+          margin: 0.5rem 0;
+          min-height: 44px;
+          line-height: 1.4;
+          border-radius: 8px;
+        }
+
+        .responsive-iframe {
+          height: 260px;
+        }
+
+        .table-responsive {
+          margin: 1rem 0;
+          border-radius: 8px;
+          overflow: hidden;
+        }
+
+        table th,
+        table td {
+          padding: 0.625rem 0.5rem;
+          font-size: 0.875rem;
+        }
+
+        .tech-badge {
+          font-size: 0.8125rem;
+          padding: 0.4rem 0.75rem;
+          margin: 0.2rem 0.2rem 0.2rem 0;
+        }
+
+        footer {
+          padding: 1.5rem 1.25rem;
+          margin-top: 1rem;
+          font-size: 0.875rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -595,8 +925,7 @@
           The platform is modular, allowing us to continuously integrate
           engineering advancements and adapt to new challenges.
         </p>
-
-
+      </section>
 
       <section id="tech-stack" class="section">
         <h2>Tech Stack</h2>
