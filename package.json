@@ -1,0 +1,8 @@
+{
+  "name": "alex-murray-portfolio",
+  "version": "1.0.0",
+  "description": "Alex Murray Profile Page",
+  "scripts": {
+    "dev": "npx serve ."
+  }
+}

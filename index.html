@@ -3,132 +3,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Murray - Profile</title>
+    <title>Alex Murray — Software Engineer</title>
+    <meta name="description" content="Alex Murray — Computer Science student at UB, aspiring software engineer. Explore projects in computer vision, AI, and web development.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="#about-me">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#videos">Resume</a>
-      <a href="mailto:alexandrumurray7@gmail.com">Contact</a>
-    </div>
+  <!-- Film grain overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Vignette overlay -->
+  <div class="vignette-overlay" aria-hidden="true"></div>
+
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- Floating Navigation -->
+  <nav class="floating-nav" id="floatingNav">
+    <a href="#hero" class="nav-dot active" data-section="hero" aria-label="Hero">
+      <span class="nav-label">Home</span>
+    </a>
+    <a href="#projects" class="nav-dot" data-section="projects" aria-label="Projects">
+      <span class="nav-label">Projects</span>
+    </a>
+    <a href="#about" class="nav-dot" data-section="about" aria-label="About">
+      <span class="nav-label">About</span>
+    </a>
+    <a href="#resume" class="nav-dot" data-section="resume" aria-label="Resume">
+      <span class="nav-label">Resume</span>
+    </a>
   </nav>
-  
 
-    <header>
-        <h1>Alex Murray</h1>
-        <p>Computer Science Student @ UB & Aspiring Software Engineer</p>
-        <img src="images/Photo on 7-29-24 at 11.01 PM.jpg" alt = "Picture of Me"  class="image-container">
-    </header>
+  <!-- Scroll Container -->
+  <main class="scroll-container" id="scrollContainer">
 
-    <section id="about-me">
-        <h2>About Me</h2>
-        <p>Hi, I'm Alex Murray, a Computer Science student with a passion for coding and technology. I enjoy working on innovative projects and am always eager to learn new things. In my free time I like to go to the gym or play some chess. Feel free to connect with me on LinkedIn or GitHub. This is my profile page where you can find some of my work and interests.</p>
-
-        <h2>Connect With Me</h2>
-        <p class="links-intro">Let's connect and explore opportunities together!</p>
-          <div class="link-grid">
-            <a class="button-link linkedin" href="https://www.linkedin.com/in/alex-murray-87032b25b/">
-              <span class="link-icon">💼</span>
-              LinkedIn
-            </a>
-            <a class="button-link youtube" href="https://www.youtube.com/@alexmvrray/videos">
-              <span class="link-icon">📺</span>
-              YouTube
-            </a>
-            <a class="button-link github" href="https://github.com/alex-murrayy">
-              <span class="link-icon">💻</span>
-              GitHub
-            </a>
-            <a class="button-link handshake" href="https://app.joinhandshake.com/profiles/40489757">
-              <span class="link-icon">🤝</span>
-              Handshake
-            </a>
-            <a class="button-link leetcode" href="https://leetcode.com/u/aalexmurray/">
-              <span class="link-icon">🧠</span>
-              LeetCode
-            </a>
-            <a class="button-link chess" href="https://www.chess.com/member/aalexmvrray">
-              <span class="link-icon">♟️</span>
-              Chess
-            </a>
-          </div>
-      
-        </ul>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-    
-      <div class="project-grid">
-    
-        <div class="project-card">
-          <h3>Computer Vision Mouse</h3>
-          <p>This project uses computer vision to enable the user to perform mouse actions by making simple hand movements and gestures.</p>
-          <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/p_QCPGMXJok" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <a class="button-link" href="https://github.com/alex-murrayy/Computer-Vision-Mouse">View on GitHub</a>
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SCENE 1: HERO                                  -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="scene scene-hero" id="hero" data-scene="hero">
+      <div class="hero-bg-layer" aria-hidden="true">
+        <img src="images/hero-bg.png" alt="" class="hero-bg-img">
+      </div>
+      <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-photo-wrapper reveal-item">
+          <img src="images/profile.jpg" alt="Alex Murray" class="hero-photo">
+          <div class="photo-ring"></div>
         </div>
-    
-        <div class="project-card">
-          <h3>Pupil Tracking</h3>
-          <p>This code tracks the user's pupils. Will be posted to GitHub soon.</p>
-          <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/s6zmPjJOjfI" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <a class="button-link" href="https://github.com/alex-murrayy">View on GitHub</a>
+        <h1 class="hero-title reveal-item">
+          <span class="title-line">Alex</span>
+          <span class="title-line accent">Murray</span>
+        </h1>
+        <p class="hero-subtitle reveal-item">
+          <span class="subtitle-text" id="heroSubtitle"></span>
+          <span class="subtitle-cursor">|</span>
+        </p>
+        <div class="hero-tags reveal-item">
+          <span class="tag">Computer Science @ UB</span>
+          <span class="tag-divider">·</span>
+          <span class="tag">Software Engineer</span>
+          <span class="tag-divider">·</span>
+          <span class="tag">Builder</span>
         </div>
-
-        <div class="project-card">
-          <h3>Pop World v2</h3>
-          <p>A modern web application showcasing interactive features and responsive design. Built with cutting-edge web technologies to deliver an engaging user experience.</p>
-          <a class="button-link" href="https://v2.pop-world.org" target="_blank">Visit Site</a>
-        </div>
-
-        <div class="project-card">
-          <h3>EPL Predictor</h3>
-          <p>Makes predictions on the outcome of the English Premier League based on a team's performance (2021-2022).</p>
-          <a class="button-link" href="https://github.com/alex-murrayy/EPL-Predictor-">Try It</a>
-        </div>
-
-        <div class="project-card">
-          <h3>BetGenie</h3>
-          <p>If you're into sports, stats, and outsmarting the books, you’ll feel right at home here.</p>
-          <a class="button-link" href="https://www.linkedin.com/company/betgenie/posts/?feedView=all">View on LinkedIn</a>
-        </div>
-    
-        <div class="project-card">
-          <h3>BAC Calculator</h3>
-          <p>This is a simple web app that calculates Blood Alcohol Content of users and then tells them whether it is safe to drive or not.</p>
-          <a class="button-link" href="BAC.html">Try It</a>
-        </div>
-
-        <div class="project-card">
-          <h3>Streetsweep</h3>
-          <p>Autonomous trash collector powered by AI tools. A scalable, multi-model robotic platform designed to autonomously manage roadside litter with a fleet of compact, all-terrain robots.</p>
-          <a class="button-link" href="streetsweep.html">View Project</a>
-        </div>
-    
+      </div>
+      <div class="scroll-indicator reveal-item" aria-label="Scroll down">
+        <span class="scroll-text">Scroll</span>
+        <div class="scroll-line"></div>
       </div>
     </section>
-    
 
-    <section id="videos">
-        <h2>Resume</h2>
-        <div class="resume-container">
-            <iframe src="images/Undergraduate Resume Fall 2025 copy.pdf" class="resume-pdf"></iframe>
-            <div class="resume-download">
-                <a href="images/Undergraduate Resume Fall 2025 copy.pdf" download class="button-link">Download Resume</a>
-            </div>
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SCENE 2: PROJECTS                              -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="scene scene-projects" id="projects" data-scene="projects">
+      <div class="scene-inner">
+        <div class="section-header reveal-item">
+          <span class="section-number">01</span>
+          <h2 class="section-title">Projects</h2>
+          <div class="section-line"></div>
         </div>
+        <div class="projects-carousel-wrapper reveal-item">
+          <div class="projects-carousel" id="projectsCarousel">
+
+            <div class="project-card glass-card">
+              <div class="card-accent"></div>
+              <h3 class="card-title">Street Drifter</h3>
+              <p class="card-desc">A 3D street racing game with realistic drifting physics, multiple cars, and city tracks. Built with Three.js.</p>
+              <div class="card-image">
+                <img src="images/street_drifter.png" alt="Street Drifter Game">
+              </div>
+              <a class="card-link" href="https://alexmvrray.itch.io/streetdrifter" target="_blank">
+                <span>Play Game</span>
+                <span class="link-arrow">→</span>
+              </a>
+            </div>
+
+            <div class="project-card glass-card">
+              <div class="card-accent"></div>
+              <h3 class="card-title">Pop World v2</h3>
+              <p class="card-desc">Built during a Data Science internship with the National Science Foundation — an interactive web application used by thousands in UB's Evolutionary Biology course to simulate population dynamics.</p>
+              <div class="card-image">
+                <img src="images/popworld_thumbnail.png" alt="Pop World v2 Thumbnail">
+              </div>
+              <a class="card-link" href="https://v2.pop-world.org" target="_blank">
+                <span>Visit Site</span>
+                <span class="link-arrow">→</span>
+              </a>
+            </div>
+
+            <div class="project-card glass-card">
+              <div class="card-accent"></div>
+              <h3 class="card-title">BetGenie</h3>
+              <p class="card-desc">Sports analytics platform — if you're into stats and outsmarting the books, you'll feel right at home.</p>
+              <div class="card-image">
+                <img src="images/BetGenie.png" alt="BetGenie Logo">
+              </div>
+              <a class="card-link" href="https://betgenie.bet/" target="_blank">
+                <span>Visit Site</span>
+                <span class="link-arrow">→</span>
+              </a>
+            </div>
+
+            <div class="project-card glass-card">
+              <div class="card-accent"></div>
+              <h3 class="card-title">Computer Vision Mouse</h3>
+              <p class="card-desc">Uses computer vision to enable mouse actions through simple hand movements and gestures.</p>
+              <div class="card-video">
+                <iframe src="https://www.youtube.com/embed/p_QCPGMXJok" frameborder="0" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <a class="card-link" href="https://github.com/alex-murrayy/Computer-Vision-Mouse" target="_blank">
+                <span>View on GitHub</span>
+                <span class="link-arrow">→</span>
+              </a>
+            </div>
+
+            <div class="project-card glass-card">
+              <div class="card-accent"></div>
+              <h3 class="card-title">Pupil Tracking</h3>
+              <p class="card-desc">Real-time pupil tracking using computer vision — tracks eye movement with precision.</p>
+              <div class="card-video">
+                <iframe src="https://www.youtube.com/embed/s6zmPjJOjfI" frameborder="0" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <a class="card-link" href="https://github.com/alex-murrayy" target="_blank">
+                <span>View on GitHub</span>
+                <span class="link-arrow">→</span>
+              </a>
+            </div>
+
+            <div class="project-card glass-card">
+              <div class="card-accent"></div>
+              <h3 class="card-title">EPL Predictor</h3>
+              <p class="card-desc">Predicts English Premier League outcomes using machine learning based on team performance data.</p>
+              <a class="card-link" href="https://github.com/alex-murrayy/EPL-Predictor-" target="_blank">
+                <span>Try It</span>
+                <span class="link-arrow">→</span>
+              </a>
+            </div>
+
+            <div class="project-card glass-card">
+              <div class="card-accent"></div>
+              <h3 class="card-title">BAC Calculator</h3>
+              <p class="card-desc">Web app that calculates Blood Alcohol Content and advises whether it's safe to drive.</p>
+              <a class="card-link" href="BAC.html">
+                <span>Try It</span>
+                <span class="link-arrow">→</span>
+              </a>
+            </div>
+
+            <div class="project-card glass-card">
+              <div class="card-accent"></div>
+              <h3 class="card-title">Streetsweep</h3>
+              <p class="card-desc">Autonomous trash collector powered by AI — a multi-model robotic platform for managing roadside litter.</p>
+              <a class="card-link" href="streetsweep.html">
+                <span>View Project</span>
+                <span class="link-arrow">→</span>
+              </a>
+            </div>
+
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Previous project">‹</button>
+            <div class="carousel-progress">
+              <div class="carousel-progress-bar" id="carouselProgress"></div>
+            </div>
+            <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Next project">›</button>
+          </div>
+        </div>
+      </div>
     </section>
-  
-    <footer>
-        <p>&copy; 2025 Alex Murray</p>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SCENE 3: ABOUT                                 -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="scene scene-about" id="about" data-scene="about">
+      <div class="scene-inner">
+        <div class="section-header reveal-item">
+          <span class="section-number">02</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="about-content">
+          <p class="about-text reveal-item">
+            Hi, I'm Alex Murray — a Computer Science student with a passion for coding and technology. 
+            I enjoy working on innovative projects and am always eager to learn new things. 
+            In my free time I like to go to the gym or play some chess. 
+            Feel free to connect with me on LinkedIn or GitHub.
+          </p>
+          <div class="connect-section reveal-item">
+            <h3 class="connect-title">Let's Connect</h3>
+            <div class="link-grid">
+              <a class="social-card" href="https://www.linkedin.com/in/alex-murray-87032b25b/" target="_blank" id="link-linkedin">
+                <span class="social-icon">💼</span>
+                <span class="social-name">LinkedIn</span>
+                <span class="social-arrow">→</span>
+              </a>
+              <a class="social-card" href="https://www.youtube.com/@alexmvrray/videos" target="_blank" id="link-youtube">
+                <span class="social-icon">📺</span>
+                <span class="social-name">YouTube</span>
+                <span class="social-arrow">→</span>
+              </a>
+              <a class="social-card" href="https://github.com/alex-murrayy" target="_blank" id="link-github">
+                <span class="social-icon">💻</span>
+                <span class="social-name">GitHub</span>
+                <span class="social-arrow">→</span>
+              </a>
+              <a class="social-card" href="https://app.joinhandshake.com/profiles/40489757" target="_blank" id="link-handshake">
+                <span class="social-icon">🤝</span>
+                <span class="social-name">Handshake</span>
+                <span class="social-arrow">→</span>
+              </a>
+              <a class="social-card" href="https://leetcode.com/u/aalexmurray/" target="_blank" id="link-leetcode">
+                <span class="social-icon">🧠</span>
+                <span class="social-name">LeetCode</span>
+                <span class="social-arrow">→</span>
+              </a>
+              <a class="social-card" href="https://www.chess.com/member/aalexmvrray" target="_blank" id="link-chess">
+                <span class="social-icon">♟️</span>
+                <span class="social-name">Chess</span>
+                <span class="social-arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SCENE 4: RESUME                                -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="scene scene-resume" id="resume" data-scene="resume">
+      <div class="scene-inner">
+        <div class="section-header reveal-item">
+          <span class="section-number">03</span>
+          <h2 class="section-title">Resume</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="resume-wrapper reveal-item">
+          <div class="resume-frame glass-card">
+            <iframe src="images/Undergraduate Resume Fall 2025 copy.pdf" class="resume-embed" title="Alex Murray Resume"></iframe>
+          </div>
+          <a href="images/Undergraduate Resume Fall 2025 copy.pdf" download class="download-btn" id="download-resume">
+            <span class="download-icon">↓</span>
+            <span>Download Resume</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SCENE 5: FOOTER                                -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <footer class="scene scene-footer" id="footer">
+      <div class="footer-content reveal-item">
+        <div class="footer-line"></div>
+        <p class="footer-credit">Designed & Built by <span class="footer-name">Alex Murray</span></p>
+        <p class="footer-year">&copy; 2025</p>
+        <div class="footer-links">
+          <a href="https://github.com/alex-murrayy" target="_blank">GitHub</a>
+          <span class="footer-dot">·</span>
+          <a href="https://www.linkedin.com/in/alex-murray-87032b25b/" target="_blank">LinkedIn</a>
+          <span class="footer-dot">·</span>
+          <a href="mailto:alexandrumurray7@gmail.com">Email</a>
+        </div>
+      </div>
     </footer>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
