@@ -708,6 +708,7 @@ body:hover .cursor-glow { opacity: 1; }
    ═══════════════════════════════════════════════ */
 .scene-resume {
   background: var(--bg-scene);
+  overflow: visible;
 }
 
 .scene-resume::before {
@@ -723,6 +724,7 @@ body:hover .cursor-glow { opacity: 1; }
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  padding-bottom: 2rem;
 }
 
 .resume-frame {
