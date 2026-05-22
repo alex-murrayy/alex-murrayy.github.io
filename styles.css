@@ -848,6 +848,8 @@ body:hover .cursor-glow { opacity: 1; }
    RESPONSIVE
    ═══════════════════════════════════════════════ */
 @media (max-width: 768px) {
+  html { scroll-snap-type: none; }
+  .scene { scroll-snap-align: none; scroll-snap-stop: normal; }
   .floating-nav { right: 1rem; gap: 1rem; }
   .nav-label { display: none; }
   .hero-title { font-size: clamp(2.5rem, 12vw, 4rem); }
